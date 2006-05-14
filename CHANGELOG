@@ -1,4 +1,7 @@
-$Id$
+$Id: CHANGELOG,v 1.5 2006/05/14 10:33:10 luc Exp luc $
+
+Version 1.6: 
+	- creation du CHANGELOG
 
 Version 1.5: 
 	- On envoie le All_notes_off avant le panic. C'est plus efficace
