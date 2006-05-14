@@ -1,0 +1,30 @@
+$Id$
+
+Version 1.5: 
+	- On envoie le All_notes_off avant le panic. C'est plus efficace
+	  mais contraire au preconisation de la norme MIDI.
+
+Version 1.4: 
+	- Utilisation des resistances de tirages internes
+          dans la version 12C508 pour GPIO-0, GPIO-1 et 
+          GPIO-3.
+
+Version 1.3: 
+	- Mise en place du RCS
+	- Activation du RUNNING-STATUS par cavalier
+
+Version 1.2: mer 10 mai 2006 20:01:22 CEST 
+        - Ajout d'une entrée MIDI-IN pour fonctionnement en 
+          PASS-THROUGHT. On introduit ainsi une latence de 8uS.
+        - Suppression de la LED de visu par le uP. Elle est
+          directement connectée la sortie MIDI. 
+
+Version 1.1: jeu 04 mai 2006 18:13:08 CEST 
+        - Suppression du "All controllers Reset", Remplacement par 
+          "All sounds Off" et correction des messages "Channels"
+        - Implementation correcte du running status
+          (compilation conditionnelle)
+        - Ajout d'une led de visu pour la transmission
+
+Version 1.0: sam 29 avr 2006 09:34:15 CEST 
+        - Debuggage timing soft-uart
