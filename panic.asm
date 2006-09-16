@@ -20,7 +20,7 @@
 ;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 ;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;
-;	$Id: panic.asm,v 1.7 2006/07/18 13:09:44 luc Exp $
+;	$Id: panic.asm,v 1.8 2006/07/21 14:36:57 luc Exp $
 ;
 ;************************************************************************;
 
@@ -48,9 +48,9 @@ else
 	#define		KEY1		PORT,0	; pin 7
 	#define		KEY2		PORT,1	; pin 6
 	#define		RS_SWITCH	PORT,3
-	#define		MIDIOUT		PORT,4
-	#define 	MIDI_IN		PORT,5
-	#define		MASK 		b'11001111'
+	#define		MIDIOUT		PORT,4  ; pin 3
+	#define 	MIDI_IN		PORT,5  ; pin 2
+	#define		MASK 		b'11101111'
 
 	__CONFIG _CP_OFF & _MCLRE_OFF & _WDT_OFF & _IntRC_OSC
 endif
