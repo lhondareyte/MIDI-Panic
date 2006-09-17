@@ -20,7 +20,7 @@
 ;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 ;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;
-;	$Id: panic.asm,v 1.8 2006/07/21 14:36:57 luc Exp $
+;	$Id: panic.asm,v 1.9 2006/09/16 16:34:33 luc Exp luc $
 ;
 ;************************************************************************;
 
@@ -47,7 +47,7 @@ else
 	#define		PORT		GPIO
 	#define		KEY1		PORT,0	; pin 7
 	#define		KEY2		PORT,1	; pin 6
-	#define		RS_SWITCH	PORT,3
+	#define		RS_SWITCH	PORT,3  ; pin 4
 	#define		MIDIOUT		PORT,4  ; pin 3
 	#define 	MIDI_IN		PORT,5  ; pin 2
 	#define		MASK 		b'11101111'
@@ -180,8 +180,8 @@ send_char
 	call	StartBit	; START BIT
 
 ;************************************************************************;
-;    Routine a réecrire en plus propre mais critique au niveau timing
-;                (lié aux routines zero_logic et un_logic)
+;    Routine a réecrire en plus propre mais critique au niveau timing    ;
+;                (lié aux routines zero_logic et un_logic)               ;
 ;************************************************************************;
 next_bit
         nop			; **** Ajustement ******
@@ -206,7 +206,7 @@ __ZeroLogic
 	retlw	0			
 
 ;************************************************************************;
-;          	  Pause de 320uS avant l'envoi d'un message              ;
+;          	  Pause de 320uS avant l'envoi d'un message                  ;
 ;************************************************************************;
 
 pause320uS
@@ -231,7 +231,7 @@ loop_p
 	goto	loop_p
 
 ;************************************************************************;
-;          	            Pause de 200mS                               ;
+;          	            Pause de 200mS                                   ;
 ;************************************************************************;
 
 pause200mS
@@ -291,13 +291,20 @@ endif
 
 wait_for_keys
 
-	btfsc	MIDI_IN		; PASS-THROUGHT MIDI : On recopie MIDI_IN
-	bsf	MIDIOUT		; sur MIDIOUT. Les deux btfsX à suivre sont 
-	btfss	MIDI_IN		; moins couteux en temps que des "goto".
+	btfsc	MIDI_IN     ; PASS-THROUGHT MIDI : On recopie MIDI_IN
+	bsf     MIDIOUT     ; sur MIDIOUT. Les deux btfsX à suivre sont 
+	btfss	MIDI_IN	    ; moins couteux en temps que des "goto".
 
 	bcf	MIDIOUT
-
-	btfss	KEY1		; Si KEY1 est enfoncée, on va au
+;************************************************************************;
+;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY1:       ;
+;  S1 met à "0" uniquement KEY1                                          ;
+;  S2 met à "0" KEY1 et KEY2 (voir diode D1)                             ;
+;  Dans tous les cas, KEY1 est à "0". Donc, dans la boucle PASS-THROUGHT,;
+;  on regarde si une touche est enfoncée. Dans la boucle read_keys, on   ;
+;  determine quelle touche est enfoncée.                                 ;
+;************************************************************************;
+	btfss	KEY1		; Si KEY1 n'est pas relachée, on va au
 	goto	read_keys	; traitement clavier.
 
 	goto	wait_for_keys
@@ -305,19 +312,19 @@ wait_for_keys
 ;************************************************************************;
 ;                     FIN de boucle PASS-THROUGHT                        ;
 ;************************************************************************;
-;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY2:
-;  S1 met à "1" KEY1 et KEY2 (voir diode D1)
-;  S2 met à "1" uniquement KEY2
-;  Donc, dans la boucle PASS-THROUGHT, on regarde si une touche est 
-;  enfoncée. Dans la boucle read_keys, on determine quelle touche est
-;  enfoncée.
-;************************************************************************;
+
 
 read_keys
 	btfss	KEY2		
 	goto	All_sounds_off
-;	goto 	panic		; panic est à suivre
+ifdef __16F84A	
+	goto 	panic
+else	
 	goto	All_notes_off
+endif	
+;************************************************************************;
+;                           Procedure PANIC                              ;
+;************************************************************************;
 
 panic	
 	bsf	MIDIOUT		; nettoyage sortie MIDI
@@ -329,7 +336,7 @@ next_channel_0
 
 	movf	canal,f
 	btfsc	STATUS,Z
-;	goto	All_notes_off
+
 	goto	wait_for_keys
 	decf	canal,f
 
@@ -341,7 +348,7 @@ next_note
 	decf	notes,f
 
 ;************************************************************************;
-;  Gestion du RUNNING STATUS, Si S3 est ON, on active le RS
+;  Gestion du RUNNING STATUS, Si S3 est ON, on active le RS              ;
 ;************************************************************************;
 
 	btfsc	RS_SWITCH
@@ -373,7 +380,10 @@ running_status
 	btfsc	STATUS,Z
 	goto	next_channel_0
 	goto	next_note
-	
+;************************************************************************;	
+;                            Fin PANIC                                   ;
+;************************************************************************;
+
 ;************************************************************************;
 ;          Envoi du message "All sound Off" (0xBX + 0x79 + 0x00)         ;
 ;          X= valeur du canal MIDI                                       ;
@@ -416,7 +426,7 @@ wait
 ;          Envoi du message "All Notes OFF" (0xBX + 0x7B + 0x00)         ;
 ;          X= valeur du canal MIDI                                       ;
 ;************************************************************************;	
-
+ifdef __12C508
 All_notes_off
 
 
@@ -442,9 +452,7 @@ next_channel_2
 
 	movf	canal,f
 	btfsc	STATUS,Z
-;	goto	wait_for_keys
 	goto	panic
 	goto	next_channel_2
-
+endif
 	end
-;
