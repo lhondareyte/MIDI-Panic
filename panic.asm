@@ -47,7 +47,7 @@ else
 	#define		PORT		GPIO
 	#define		KEY1		PORT,0	; pin 7
 	#define		KEY2		PORT,1	; pin 6
-	#define		RS_SWITCH	PORT,3  ; pin 4
+	#define		RS_SWITCH	PORT,3
 	#define		MIDIOUT		PORT,4  ; pin 3
 	#define 	MIDI_IN		PORT,5  ; pin 2
 	#define		MASK 		b'11101111'
@@ -90,9 +90,9 @@ endif
 
 ;OneToZero
 StartBit
-        nop
+    nop
 	nop
-        nop
+    nop
 	nop
 	nop
 
@@ -170,43 +170,33 @@ UnLogic
 ;************************************************************************;
 ;               Transmission de 1 caractere avec 1 BIT de                ;
 ;                        START et un bit de STOP                         ;
-;                                                                        ;
-;    TODO: faire une macro transmit                                      ;
 ;************************************************************************;
 
 send_char
-	movlw	8		; un octet = 8 bits
+	movlw	8			; un octet = 8 bits
 	movwf 	bits		; initialisation du compteur de bits
 	call	StartBit	; START BIT
 
-;************************************************************************;
-;    Routine a réecrire en plus propre mais critique au niveau timing    ;
-;                (lié aux routines zero_logic et un_logic)               ;
-;************************************************************************;
 next_bit
-        nop			; **** Ajustement ******
+
+    nop					; **** Ajustement ******
 	rrf 	buffer,f	; Rotation de buffer
 	btfsc	STATUS,C	; pour tester la retenue 
-	goto	__UnLogic	; si C=1 on envoie un "1"
+	call	UnLogic		; si C=1 on envoie un "1"
 
+	btfss	STATUS,C
 	call 	ZeroLogic	; sinon, on envoie "0"
-	goto	__ZeroLogic
 
-__UnLogic
-	call	UnLogic
 
-__ZeroLogic	 
-
-;************************************************************************;
-
-	decfsz	bits,1		; Si le compteur de bit
+	decfsz	bits,1		; Si compteur de bit à zéro
 	goto	next_bit	; on traite le suivant
 
 	call 	StopBit		; envoi du STOP BIT
 	retlw	0			
 
+
 ;************************************************************************;
-;          	  Pause de 320uS avant l'envoi d'un message                  ;
+;          	  Pause de 320uS avant l'envoi d'un message              ;
 ;************************************************************************;
 
 pause320uS
@@ -231,7 +221,7 @@ loop_p
 	goto	loop_p
 
 ;************************************************************************;
-;          	            Pause de 200mS                                   ;
+;          	            Pause de 200mS                               ;
 ;************************************************************************;
 
 pause200mS
@@ -281,53 +271,48 @@ endif
 ;                  Debut des hostilites...                               ;
 ;************************************************************************;
 
-	bsf	MIDIOUT		; Sortie MIDI à 1
-
+	bsf		MIDIOUT		; Sortie MIDI à 1
+	call	pause200mS
 ;************************************************************************;
 ;   Pour eviter des problèmes de glissement de temps, la duree de la     ;
 ;   boucle PASS-THROUGHT doit etre multiple de 32uS. Ici, elle dure 8uS, ;
 ;   soit 32uS/4.                                                         ;
 ;************************************************************************;
 
-wait_for_keys
+Normal_Operation
 
-	btfsc	MIDI_IN     ; PASS-THROUGHT MIDI : On recopie MIDI_IN
-	bsf     MIDIOUT     ; sur MIDIOUT. Les deux btfsX à suivre sont 
-	btfss	MIDI_IN	    ; moins couteux en temps que des "goto".
+	btfsc	MIDI_IN		; PASS-THROUGHT MIDI : On recopie MIDI_IN
+	bsf		MIDIOUT		; sur MIDIOUT. Les deux btfsX à suivre sont 
+	btfss	MIDI_IN		; moins couteux en temps que des "goto".
+	bcf		MIDIOUT
 
-	bcf	MIDIOUT
-;************************************************************************;
-;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY1:       ;
-;  S1 met à "0" uniquement KEY1                                          ;
-;  S2 met à "0" KEY1 et KEY2 (voir diode D1)                             ;
-;  Dans tous les cas, KEY1 est à "0". Donc, dans la boucle PASS-THROUGHT,;
-;  on regarde si une touche est enfoncée. Dans la boucle read_keys, on   ;
-;  determine quelle touche est enfoncée.                                 ;
-;************************************************************************;
-	btfss	KEY1		; Si KEY1 n'est pas relachée, on va au
+	btfss	KEY1		; Si KEY1 est enfoncée, on va au
 	goto	read_keys	; traitement clavier.
 
-	goto	wait_for_keys
+	goto	Normal_Operation
 
 ;************************************************************************;
 ;                     FIN de boucle PASS-THROUGHT                        ;
 ;************************************************************************;
-
+;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY2:
+;  S1 met à "1" KEY1 et KEY2 (voir diode D1)
+;  S2 met à "1" uniquement KEY2
+;  Donc, dans la boucle PASS-THROUGHT, on regarde si une touche est 
+;  enfoncée. Dans la boucle read_keys, on determine quelle touche est
+;  enfoncée.
+;************************************************************************;
 
 read_keys
 	btfss	KEY2		
 	goto	All_sounds_off
-ifdef __16F84A	
-	goto 	panic
-else	
-	goto	All_notes_off
-endif	
-;************************************************************************;
-;                           Procedure PANIC                              ;
-;************************************************************************;
+	goto 	Panic
+;	goto	All_notes_off
 
-panic	
-	bsf	MIDIOUT		; nettoyage sortie MIDI
+;************************************************************************;
+;                     Envoi du Panic                                     ;
+;************************************************************************;
+Panic	
+	bsf		MIDIOUT		; nettoyage sortie MIDI
 	call	pause320uS
 	movlw	d'16'
 	movwf	canal		; Initialisation du compteur de canaux
@@ -336,8 +321,8 @@ next_channel_0
 
 	movf	canal,f
 	btfsc	STATUS,Z
-
-	goto	wait_for_keys
+;	goto	All_notes_off
+	goto	Normal_Operation
 	decf	canal,f
 
 	movlw	d'128'
@@ -347,9 +332,8 @@ next_note
 
 	decf	notes,f
 
-;************************************************************************;
-;  Gestion du RUNNING STATUS, Si S3 est ON, on active le RS              ;
-;************************************************************************;
+;  Gestion du RUNNING STATUS, Si S3 est ON, on active le RS
+
 
 	btfsc	RS_SWITCH
 	goto	no_running_status
@@ -361,7 +345,7 @@ next_note
 
 no_running_status
 
-	movlw	80
+	movlw	0x80
 	addwf	canal,w
 	movwf	buffer		; Preparation du message NoteOff (0x80+canal)
 	call	send_char	; Envoi du Note-OFF
@@ -380,10 +364,7 @@ running_status
 	btfsc	STATUS,Z
 	goto	next_channel_0
 	goto	next_note
-;************************************************************************;	
-;                            Fin PANIC                                   ;
-;************************************************************************;
-
+	
 ;************************************************************************;
 ;          Envoi du message "All sound Off" (0xBX + 0x79 + 0x00)         ;
 ;          X= valeur du canal MIDI                                       ;
@@ -391,7 +372,8 @@ running_status
 
 All_sounds_off
 
-	bsf	MIDIOUT		; nettoyage sortie MIDI
+	bsf	MIDIOUT			; nettoyage sortie MIDI
+	call	pause320uS
 	call	pause320uS
 	movlw	d'16'
 	movwf	canal		; Initialisation du compteur de canaux
@@ -404,14 +386,17 @@ next_channel_1
 	movwf	buffer		; Preparation du message AllNoteOff 
 	call	send_char	; (0xB0+canal)
 
+	
 	movlw	0x79		; Message correct pour 
 	movwf	buffer		; "All sound Off"
 	call	send_char
 
+	
 	movlw	0
 	movwf	buffer
 	call	send_char
 
+	
 	movf	canal,f
 	btfsc	STATUS,Z
 	goto	wait
@@ -420,13 +405,13 @@ wait
 	call	pause200mS
 	call 	pause200mS
 
-	goto	wait_for_keys
+	goto	Normal_Operation
 
 ;************************************************************************;
 ;          Envoi du message "All Notes OFF" (0xBX + 0x7B + 0x00)         ;
 ;          X= valeur du canal MIDI                                       ;
 ;************************************************************************;	
-ifdef __12C508
+
 All_notes_off
 
 
@@ -452,7 +437,8 @@ next_channel_2
 
 	movf	canal,f
 	btfsc	STATUS,Z
-	goto	panic
+	goto	Normal_Operation
+
 	goto	next_channel_2
-endif
+
 	end
