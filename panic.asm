@@ -20,7 +20,7 @@
 ;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 ;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;
-;	$Id: panic.asm,v 1.9 2006/09/16 16:34:33 luc Exp luc $
+;	$Id: panic.asm,v 1.11 2006/09/30 11:20:28 luc Exp luc $
 ;
 ;************************************************************************;
 
@@ -75,7 +75,7 @@ endc
 
 ifndef __16F84A
 				; Pour les 12C50x:
-	movwf OSCCAL		; Calibration de l'oscillateur interne
+	movwf	OSCCAL		; Calibration de l'oscillateur interne
 				; La valeur de calibration se trouve dans
 				; W lors d'un reset.
 endif
@@ -90,9 +90,9 @@ endif
 
 ;OneToZero
 StartBit
-    nop
 	nop
-    nop
+	nop
+	nop
 	nop
 	nop
 
@@ -103,7 +103,7 @@ ZeroLogic
 	nop
 	nop
 
-	bcf	MIDIOUT		; transition à 10uS
+	bcf		MIDIOUT	; transition à 10uS
 
 	nop
 	nop
@@ -129,9 +129,9 @@ ZeroLogic
 
 ;ZeroToOne
 StopBit
-        nop
 	nop
-        nop
+	nop
+	nop
 	nop
 	nop
 
@@ -143,7 +143,7 @@ UnLogic
 	nop
 	nop
 	nop
-	bsf	MIDIOUT		; transition à 10uS
+	bsf		MIDIOUT		; transition à 10uS
 
 	nop
 	nop
@@ -173,13 +173,13 @@ UnLogic
 ;************************************************************************;
 
 send_char
-	movlw	8			; un octet = 8 bits
+	movlw	8		; un octet = 8 bits
 	movwf 	bits		; initialisation du compteur de bits
 	call	StartBit	; START BIT
 
 next_bit
 
-    nop					; **** Ajustement ******
+    	nop			; **** Ajustement ******
 	rrf 	buffer,f	; Rotation de buffer
 	btfsc	STATUS,C	; pour tester la retenue 
 	call	UnLogic		; si C=1 on envoie un "1"
@@ -278,7 +278,10 @@ endif
 ;   boucle PASS-THROUGHT doit etre multiple de 32uS. Ici, elle dure 8uS, ;
 ;   soit 32uS/4.                                                         ;
 ;************************************************************************;
-
+Wait_Release_Keys
+	btfss	KEY1		; Si une des touches est enfoncée
+	goto	Wait_Release_Keys; on attend son relachement
+	
 Normal_Operation
 
 	btfsc	MIDI_IN		; PASS-THROUGHT MIDI : On recopie MIDI_IN
@@ -306,7 +309,6 @@ read_keys
 	btfss	KEY2		
 	goto	All_sounds_off
 	goto 	Panic
-;	goto	All_notes_off
 
 ;************************************************************************;
 ;                     Envoi du Panic                                     ;
@@ -321,8 +323,8 @@ next_channel_0
 
 	movf	canal,f
 	btfsc	STATUS,Z
-;	goto	All_notes_off
-	goto	Normal_Operation
+
+	goto	Wait_Release_Keys
 	decf	canal,f
 
 	movlw	d'128'
@@ -340,7 +342,7 @@ next_note
 
 	movf	notes,w		; Si le numero de note
 	xorlw	d'127'		; est different de 127,
-	btfss	STATUS,Z	; on n'envoie pas le bit de 
+	btfss	STATUS,Z	; on n'envoie pas le bit de
 	goto	running_status	; status (running status)
 
 no_running_status
@@ -357,7 +359,7 @@ running_status
 	call 	send_char	; Envoi du numéro de note
 
 	movlw 	0
-	movwf	buffer		 
+	movwf	buffer
 	call	send_char	; Envoi du bit de status (velocité=0)
 
 	movf	notes,f	
@@ -402,43 +404,7 @@ next_channel_1
 	goto	wait
 	goto	next_channel_1
 wait
-	call	pause200mS
-	call 	pause200mS
 
-	goto	Normal_Operation
-
-;************************************************************************;
-;          Envoi du message "All Notes OFF" (0xBX + 0x7B + 0x00)         ;
-;          X= valeur du canal MIDI                                       ;
-;************************************************************************;	
-
-All_notes_off
-
-
-	movlw	d'16'
-	movwf	canal		; Initialisation du compteur de canaux
-
-next_channel_2
-
-	decf	canal,f
-
-	movlw	0xB0
-	addwf	canal,w
-	movwf	buffer		; Preparation du message AllNoteOff 
-	call	send_char	; (0xB0+canal)
-
-	movlw	0x7B		; Message correct pour 
-	movwf	buffer		; "All notes Off"
-	call	send_char
-
-	movlw	0
-	movwf	buffer
-	call	send_char
-
-	movf	canal,f
-	btfsc	STATUS,Z
-	goto	Normal_Operation
-
-	goto	next_channel_2
+	goto	Wait_Release_Keys
 
 	end
