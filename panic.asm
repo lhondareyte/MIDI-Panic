@@ -20,7 +20,7 @@
 ;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 ;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;
-;	$Id: panic.asm,v 1.11 2006/09/30 11:20:28 luc Exp luc $
+;	$Id: panic.asm,v 1.12 2007/05/01 09:23:10 luc Exp luc $
 ;
 ;************************************************************************;
 
@@ -82,13 +82,10 @@ endif
 
 	goto	init
 
-
-				
 ;************************************************************************;
 ;     Generation des signaux logiques à 31250 Bauds soit 32uS par bit    ;
 ;************************************************************************;
 
-;OneToZero
 StartBit
 	nop
 	nop
@@ -103,7 +100,7 @@ ZeroLogic
 	nop
 	nop
 
-	bcf		MIDIOUT	; transition à 10uS
+	bcf	MIDIOUT		; transition à 10uS
 
 	nop
 	nop
@@ -127,7 +124,6 @@ ZeroLogic
 
 ;************************************************************************;
 
-;ZeroToOne
 StopBit
 	nop
 	nop
@@ -143,7 +139,7 @@ UnLogic
 	nop
 	nop
 	nop
-	bsf		MIDIOUT		; transition à 10uS
+	bsf	MIDIOUT		; transition à 10uS
 
 	nop
 	nop
@@ -241,15 +237,16 @@ __loop_201
 	goto __loop_201
 	goto __loop_200	
 		
+
 ;************************************************************************;
 ;                  Initialisation des ports                              ;
 ;************************************************************************;
 
 init
-				
 	movlw	MASK	
 			
 ifdef __16F84A
+
 	bsf	STATUS,5	; acces BANK1
 	movwf	PORT_REG
 
@@ -266,18 +263,19 @@ else
 	option			; sur GP0, GP1 et GP3.
 endif
 
-
 ;************************************************************************;
 ;                  Debut des hostilites...                               ;
 ;************************************************************************;
 
-	bsf		MIDIOUT		; Sortie MIDI à 1
+	bsf	MIDIOUT		; Sortie MIDI à 1
 	call	pause200mS
+	
 ;************************************************************************;
 ;   Pour eviter des problèmes de glissement de temps, la duree de la     ;
 ;   boucle PASS-THROUGHT doit etre multiple de 32uS. Ici, elle dure 8uS, ;
 ;   soit 32uS/4.                                                         ;
 ;************************************************************************;
+	
 Wait_Release_Keys
 	btfss	KEY1		; Si une des touches est enfoncée
 	goto	Wait_Release_Keys; on attend son relachement
@@ -285,24 +283,24 @@ Wait_Release_Keys
 Normal_Operation
 
 	btfsc	MIDI_IN		; PASS-THROUGHT MIDI : On recopie MIDI_IN
-	bsf		MIDIOUT		; sur MIDIOUT. Les deux btfsX à suivre sont 
+	bsf	MIDIOUT		; sur MIDIOUT. Les deux btfsX à suivre sont 
 	btfss	MIDI_IN		; moins couteux en temps que des "goto".
-	bcf		MIDIOUT
+	bcf	MIDIOUT
 
 	btfss	KEY1		; Si KEY1 est enfoncée, on va au
 	goto	read_keys	; traitement clavier.
-
+				; sinon, on continue le PASS-THROUGHT
 	goto	Normal_Operation
 
 ;************************************************************************;
 ;                     FIN de boucle PASS-THROUGHT                        ;
 ;************************************************************************;
-;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY2:
-;  S1 met à "1" KEY1 et KEY2 (voir diode D1)
-;  S2 met à "1" uniquement KEY2
-;  Donc, dans la boucle PASS-THROUGHT, on regarde si une touche est 
-;  enfoncée. Dans la boucle read_keys, on determine quelle touche est
-;  enfoncée.
+;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY2:       ;
+;  S1 met à "1" KEY1 et KEY2 (voir diode D1)                             ;
+;  S2 met à "1" uniquement KEY2                                          ;
+;  Donc, dans la boucle PASS-THROUGHT, on regarde si une touche est      ;
+;  enfoncée. Dans la boucle read_keys, on determine quelle touche est    ;
+;  enfoncée.                                                             ;
 ;************************************************************************;
 
 read_keys
@@ -313,8 +311,9 @@ read_keys
 ;************************************************************************;
 ;                     Envoi du Panic                                     ;
 ;************************************************************************;
+
 Panic	
-	bsf		MIDIOUT		; nettoyage sortie MIDI
+	bsf	MIDIOUT		; nettoyage sortie MIDI
 	call	pause320uS
 	movlw	d'16'
 	movwf	canal		; Initialisation du compteur de canaux
@@ -335,7 +334,6 @@ next_note
 	decf	notes,f
 
 ;  Gestion du RUNNING STATUS, Si S3 est ON, on active le RS
-
 
 	btfsc	RS_SWITCH
 	goto	no_running_status
@@ -374,7 +372,7 @@ running_status
 
 All_sounds_off
 
-	bsf	MIDIOUT			; nettoyage sortie MIDI
+	bsf	MIDIOUT		; nettoyage sortie MIDI
 	call	pause320uS
 	call	pause320uS
 	movlw	d'16'
@@ -399,12 +397,12 @@ next_channel_1
 	call	send_char
 
 	
-	movf	canal,f
-	btfsc	STATUS,Z
-	goto	wait
+	movf	canal,f		; Test si dernier canal
+	btfsc	STATUS,Z	; Prochain canal sinon
+	goto	wait		; Fin de All Sounds Off
 	goto	next_channel_1
 wait
 
 	goto	Wait_Release_Keys
 
-	end
+	end                     ; Jamais atteint
