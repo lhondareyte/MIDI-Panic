@@ -1,0 +1,572 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+<!-- CreationDate: Fri Oct 20 15:05:06 2017 -->
+<!-- Magnification: 0.525 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="4.1in" height="2.3in"
+	viewBox="1311 639 4976 2737">
+<g style="stroke-width:.025in; fill:none">
+<!-- Text -->
+<text xml:space="preserve" x="3259" y="3330" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="89" text-anchor="middle">Master Keyboard</text>
+<!-- Line: box -->
+<rect x="4478" y="1034" width="553" height="89" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4032" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4032" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3930" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3930" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4134" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4134" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4237" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4237" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Circle -->
+<circle cx="5301" cy="1079" r="120"
+ style="stroke:#000000;stroke-width:16;"/>
+<!-- Line: box -->
+<rect x="3759" y="885" width="1856" height="373" rx="0" 
+style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1723" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1872" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2022" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2172" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2322" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2471" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2621" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1827" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="1977" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2277" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2427" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2576" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2771" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2920" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3070" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3220" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3370" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3520" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3669" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2876" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="3025" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="3325" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="3475" y="2367" width="90" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="3624" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="3819" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3969" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4119" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4268" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4418" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4567" y="2367" width="150" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4718" y="2367" width="149" height="748" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3924" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="4074" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="4373" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="4522" y="2367" width="90" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="4672" y="2367" width="89" height="388" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2400" y="2108" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2400" y="2183" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2184" y="2108" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2184" y="2183" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2616" y="2108" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2616" y="2183" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2833" y="2108" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2833" y="2183" width="180" height="53" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3205" y="2112" width="583" height="119" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="3220" y="2127" width="554" height="89" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1566" y="2462" width="83" height="498" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1575" y="2493" width="66" height="436" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2508
+1641,2508
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2523
+1641,2523
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2916
+1641,2916
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2901
+1641,2901
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2870
+1641,2870
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2554
+1641,2554
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2599
+1641,2599
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2825
+1641,2825
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2765
+1641,2765
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1575,2659
+1641,2659
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1448" y="2462" width="83" height="498" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1457" y="2493" width="66" height="436" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2508
+1523,2508
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2523
+1523,2523
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2916
+1523,2916
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2901
+1523,2901
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2870
+1523,2870
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2554
+1523,2554
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2599
+1523,2599
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2825
+1523,2825
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2765
+1523,2765
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1457,2659
+1523,2659
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2112" y="1019" width="584" height="119" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2127" y="1034" width="554" height="89" rx="0" 
+style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1681" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1681" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1579" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1579" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1783" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1783" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1886" y="1029" width="85" height="48" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1886" y="1097" width="85" height="47" rx="23" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Circle -->
+<circle cx="2951" cy="1079" r="120"
+ style="stroke:#000000;stroke-width:16;"/>
+<!-- Line: box -->
+<rect x="1408" y="885" width="1856" height="373" rx="0" 
+style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="5646" y="2052" width="150" height="285" rx="39" 
+style="stroke:#000000;stroke-width:16;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="5137,885
+5137,645
+5721,645
+5721,2052
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="5721,2337
+5721,2636
+4957,2636
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="2830,885
+2830,645
+4957,645
+4957,885
+" style="stroke:#000000;stroke-width:4;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1723" y="2367" width="3144" height="748" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="1322" y="1962" width="3634" height="1179" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="826" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="start">MIDI IN</text>
+<!-- Text -->
+<text xml:space="preserve" x="5338" y="2244" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="101" text-anchor="middle">PANIC</text>
+<!-- Text -->
+<text xml:space="preserve" x="5007" y="2740" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="start">MIDI OUT</text>
+<!-- Text -->
+<text xml:space="preserve" x="5787" y="2456" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="start">MIDI IN</text>
+<!-- Text -->
+<text xml:space="preserve" x="5763" y="2031" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="start">MIDI OUT</text>
+<!-- Text -->
+<text xml:space="preserve" x="2787" y="826" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="end">MIDI IN</text>
+<!-- Text -->
+<text xml:space="preserve" x="4913" y="826" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="76" text-anchor="end">MIDI THRU</text>
+<!-- Text -->
+<text xml:space="preserve" x="2362" y="1464" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="89" text-anchor="middle">Sound Generator B</text>
+<!-- Text -->
+<text xml:space="preserve" x="4724" y="1464" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="bold" font-size="89" text-anchor="middle">Sound Generator A</text>
+<!-- Line: box -->
+<rect x="4463" y="1019" width="583" height="119" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+</g>
+</svg>

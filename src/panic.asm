@@ -20,7 +20,7 @@
 ;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 ;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;
-;	$Id: panic.asm,v 1.12 2007/05/01 09:23:10 luc Exp luc $
+;	$Id: panic.asm,v 1.13 2012/04/09 16:21:40 luc Exp $
 ;
 ;************************************************************************;
 
