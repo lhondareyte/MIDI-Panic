@@ -39,7 +39,11 @@ ifdef __16F84A
 	#define		PORT_REG	TRISA
 	#define		MASK 		b'11111011'
 
+ifdef USE_INTERNAL_OSC
+	__CONFIG _CP_OFF & _WDT_OFF & _IntRC_OSC
+else
 	__CONFIG _CP_OFF & _WDT_OFF & _HS_OSC
+endif
 
 else
 	#include <p12c508.inc> 
