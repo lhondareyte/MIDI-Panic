@@ -2,15 +2,15 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
-<!-- CreationDate: Fri Oct 20 15:07:05 2017 -->
+<!-- CreationDate: Sat Oct 21 13:58:48 2017 -->
 <!-- Magnification: 0.840 -->
 <svg	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="7.4in" height="4.2in"
-	viewBox="1188 2003 8907 5054">
+	width="7.4in" height="4.9in"
+	viewBox="1188 2003 8907 5825">
 <g style="stroke-width:.025in; fill:none">
 <!-- Text -->
-<text xml:space="preserve" x="2192" y="6992" fill="#000000"  font-family="Courier" font-style="italic" font-weight="bold" font-size="121" text-anchor="start">$Id: schema.fig,v 1.0 2006/07/23 12:57:30 luc Exp $</text>
+<text xml:space="preserve" x="3250" y="7559" fill="#000000"  font-family="Courier" font-style="italic" font-weight="bold" font-size="121" text-anchor="middle">(c)2006-2017 Luc Hondareyte</text>
 <!-- Circle -->
 <circle cx="9222" cy="3212" r="37"
  style="fill:#000000;stroke:#000000;stroke-width:6;"/>
@@ -728,6 +728,10 @@ stroke-linejoin:miter; stroke-linecap:butt;
 <text xml:space="preserve" x="6765" y="2154" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="start">+5v</text>
 <!-- Text -->
 <text xml:space="preserve" x="2418" y="6425" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="start">D1, D2 = 1N4148, 1N914</text>
+<!-- Text -->
+<text xml:space="preserve" x="1700" y="7785" fill="#000000"  font-family="Courier" font-style="italic" font-weight="bold" font-size="81" text-anchor="start">$Id: schema.fig,v 1.0 2006/07/23 12:57:30 luc Exp $</text>
+<!-- Text -->
+<text xml:space="preserve" x="6500" y="6878" fill="#000000"  font-family="Helvetica" font-style="italic" font-weight="bold" font-size="162" text-anchor="middle">MIDI Panic Switch</text>
 <!-- Circle -->
 <circle cx="9222" cy="4044" r="37"
  style="fill:#000000;stroke:#000000;stroke-width:6;"/>

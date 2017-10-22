@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
-<!-- CreationDate: Fri Oct 20 15:06:46 2017 -->
+<!-- CreationDate: Sat Oct 21 13:53:58 2017 -->
 <!-- Magnification: 0.840 -->
 <svg	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -10,7 +10,7 @@
 	viewBox="440 2029 9752 9737">
 <g style="stroke-width:.025in; fill:none">
 <!-- Text -->
-<text xml:space="preserve" x="7256" y="9259" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">100n</text>
+<text xml:space="preserve" x="6727" y="10507" fill="#000000"  font-family="Helvetica" font-style="italic" font-weight="normal" font-size="121" text-anchor="middle">http://github.com/lhondareyte/MIDI-Panic</text>
 <!-- Line -->
 <polyline points="6500,5933
 6803,5933
@@ -181,65 +181,6 @@ stroke-linejoin:round; stroke-linecap:butt;
 " style="stroke:#000000;stroke-width:6;
 stroke-linejoin:round; stroke-linecap:butt;
 "/>
-<!-- Line -->
-<polyline points="2683,5064
-2381,5064
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
-<polyline points="2305,5064
-2003,5064
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
-<polyline points="2418,4913
-2418,5215
-" style="stroke:#000000;stroke-width:13;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
-<polyline points="2192,4913
-2192,5215
-2418,5064
-2192,4913
-" style="stroke:#000000;stroke-width:13;
-stroke-linejoin:miter; stroke-linecap:butt;
-fill:#000000;
-"/>
-<!-- Line -->
-<polyline points="2343,5177
-2418,5291
-2343,5366
-2376,5417
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 2343 5366 - 2425 5490-->
-<polygon points="2360 5426
-2418 5479
-2391 5405
-2360 5426
-
-" style="stroke:#000000;stroke-width:6;stroke-miterlimit:8;
-fill:#000000;"/>
-<!-- Line -->
-<polyline points="2229,5215
-2305,5329
-2229,5404
-2263,5455
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 2229 5404 - 2312 5528-->
-<polygon points="2246 5464
-2304 5517
-2277 5443
-2246 5464
-
-" style="stroke:#000000;stroke-width:6;stroke-miterlimit:8;
-fill:#000000;"/>
 <!-- Circle -->
 <circle cx="3590" cy="5064" r="37"
  style="stroke:#000000;stroke-width:13;"/>
@@ -277,23 +218,6 @@ stroke-linejoin:round; stroke-linecap:butt;
 3930,5026
 " style="stroke:#000000;stroke-width:6;
 stroke-linejoin:round; stroke-linecap:butt;
-"/>
-<!-- Line: box -->
-<rect x="2759" y="4988" width="604" height="151" rx="0" 
-style="stroke:#000000;stroke-width:13;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
-<polyline points="2759,5064
-2570,5064
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
-<polyline points="3552,5064
-3363,5064
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
 "/>
 <!-- Line: box -->
 <rect x="2759" y="6614" width="604" height="151" rx="0" 
@@ -1260,6 +1184,81 @@ stroke-linejoin:miter; stroke-linecap:butt;
 <text xml:space="preserve" x="2418" y="3590" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="101" text-anchor="start">4</text>
 <!-- Text -->
 <text xml:space="preserve" x="2381" y="4270" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="101" text-anchor="start">5</text>
+<!-- Circle -->
+<circle cx="529" cy="8088" r="37"
+ style="fill:#000000;stroke:#000000;stroke-width:6;"/>
+<!-- Line -->
+<polyline points="1587,5177
+1662,5291
+1587,5366
+1620,5417
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 1587 5366 - 1669 5490-->
+<polygon points="1604 5426
+1662 5479
+1635 5405
+1604 5426
+
+" style="stroke:#000000;stroke-width:6;stroke-miterlimit:8;
+fill:#000000;"/>
+<!-- Line -->
+<polyline points="1474,5215
+1549,5329
+1474,5404
+1507,5455
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Arrowhead on XXXpoint 1474 5404 - 1556 5528-->
+<polygon points="1490 5464
+1548 5517
+1521 5443
+1490 5464
+
+" style="stroke:#000000;stroke-width:6;stroke-miterlimit:8;
+fill:#000000;"/>
+<!-- Line -->
+<polyline points="1549,5064
+1247,5064
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1662,4913
+1662,5215
+" style="stroke:#000000;stroke-width:13;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1436,4913
+1436,5215
+1662,5064
+1436,4913
+" style="stroke:#000000;stroke-width:13;
+stroke-linejoin:miter; stroke-linecap:butt;
+fill:#000000;
+"/>
+<!-- Line: box -->
+<rect x="2116" y="4988" width="604" height="151" rx="0" 
+style="stroke:#000000;stroke-width:13;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="2116,5064
+1927,5064
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="2910,5064
+2721,5064
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Text -->
+<text xml:space="preserve" x="2381" y="4913" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">470R</text>
 <!-- Line -->
 <polyline points="6651,5669
 6651,5555
@@ -1439,13 +1438,6 @@ stroke-linejoin:miter; stroke-linecap:butt;
 stroke-linejoin:miter; stroke-linecap:butt;
 "/>
 <!-- Line -->
-<polyline points="2003,5064
-529,5064
-529,6689
-" style="stroke:#000000;stroke-width:6;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line -->
 <polyline points="529,6689
 718,6689
 " style="stroke:#000000;stroke-width:6;
@@ -1489,6 +1481,25 @@ stroke-linejoin:miter; stroke-linecap:butt;
 <polyline points="5593,3174
 4724,3174
 4724,3439
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="529,6689
+529,5064
+1247,5064
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="1662,5064
+1965,5064
+" style="stroke:#000000;stroke-width:6;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="2910,5064
+3401,5064
 " style="stroke:#000000;stroke-width:6;
 stroke-linejoin:miter; stroke-linecap:butt;
 "/>
@@ -1541,8 +1552,6 @@ stroke-linejoin:miter; stroke-linecap:butt;
 <!-- Text -->
 <text xml:space="preserve" x="6614" y="3817" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="162" text-anchor="middle">IC3</text>
 <!-- Text -->
-<text xml:space="preserve" x="2985" y="4913" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">470R</text>
-<!-- Text -->
 <text xml:space="preserve" x="2154" y="11754" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">MIDI OUTs</text>
 <!-- Text -->
 <text xml:space="preserve" x="3703" y="5442" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="start">IC2n</text>
@@ -1566,6 +1575,12 @@ stroke-linejoin:miter; stroke-linecap:butt;
 <text xml:space="preserve" x="7143" y="9070" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">C2</text>
 <!-- Text -->
 <text xml:space="preserve" x="5971" y="9297" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">47u</text>
+<!-- Text -->
+<text xml:space="preserve" x="7256" y="9259" fill="#000000"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="121" text-anchor="middle">100n</text>
+<!-- Text -->
+<text xml:space="preserve" x="6727" y="9902" fill="#000000"  font-family="Helvetica" font-style="italic" font-weight="bold" font-size="162" text-anchor="middle">MIDI-Thru BOX with Panic switch</text>
+<!-- Text -->
+<text xml:space="preserve" x="6727" y="10204" fill="#000000"  font-family="Helvetica" font-style="italic" font-weight="normal" font-size="121" text-anchor="middle">(c)2006-2017 Luc Hondareyte</text>
 <!-- Line -->
 <polyline points="6651,5933
 6651,5782
