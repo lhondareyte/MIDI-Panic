@@ -17,7 +17,8 @@ Or be include in an existing device. Eg. a MIDI Thru-box:
 <p align="center">
   <img src="figures/interface.svg" width="500"/>
 </p>
-### About the 16F84A
+
+## About the 16F84A
 The 16F84A version require a 4MHz external oscillator. If you want run the device with internal oscillator (not recommanded), add the <code>USE_INTERNAL_OSC</code> flag in Makefile:
 
 ```
@@ -33,9 +34,11 @@ MIDI OUT = pin 1  (PORTA-2)
 ```
 
 ## Example of connection
+
 <p align="center">
   <img src="figures/connexion.svg" width="600"/>
 </p>
+
 
 ## Switchs configuration
 
