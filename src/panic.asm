@@ -276,8 +276,8 @@ endif
 	
 ;************************************************************************;
 ;   Pour eviter des problèmes de glissement de temps, la duree de la     ;
-;   boucle PASS-THROUGHT doit etre multiple de 32uS. Ici, elle dure 8uS, ;
-;   soit 32uS/4.                                                         ;
+;   boucle PASS-THROUGHT doit etre un sous-multiple de 32uS.             ;
+;   Ici, elle dure 8uS, soit 32uS/4.                                     ;
 ;************************************************************************;
 	
 Wait_Release_Keys
