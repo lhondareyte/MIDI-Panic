@@ -33,8 +33,6 @@ LIBS:microchip_pic16mcu
 LIBS:mechanical
 LIBS:switches
 LIBS:midi-panic-cache
-LIBS:tinyVT-cache
-LIBS:midiusb-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -43,8 +41,8 @@ Sheet 1 1
 Title "MIDI-Panic"
 Date "2017-12-08"
 Rev "1.0"
-Comp ""
-Comment1 "12C508 version"
+Comp "Luc Hondareyte"
+Comment1 "MIDI-Panic 12C508"
 Comment2 ""
 Comment3 ""
 Comment4 ""

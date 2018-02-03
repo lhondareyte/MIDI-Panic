@@ -31,17 +31,16 @@ LIBS:valves
 LIBS:microchip_pic16mcu
 LIBS:switches
 LIBS:midi-panic-cache
-LIBS:XTAL-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "USB tiny-VT"
-Date "2014-05-11"
-Rev "0.3"
-Comp "LOFITECH"
-Comment1 ""
+Title "MIDI-Panic"
+Date "2017-12-08"
+Rev "1.0"
+Comp "Luc Hondareyte"
+Comment1 "MIDI-Panic 16F84"
 Comment2 ""
 Comment3 ""
 Comment4 ""

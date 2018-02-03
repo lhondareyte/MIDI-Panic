@@ -1,4 +1,4 @@
-update=Vendredi 08 décembre 2017 22:17:02
+update=Samedi 03 février 2018 14:15:35
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,13 @@ LibName30=microchip_pic12mcu
 LibName31=microchip_pic16mcu
 LibName32=mechanical
 LibName33=switches
+[schematic_editor]
+version=1
+PageLayoutDescrFile=midi-panic.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
