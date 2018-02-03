@@ -41,7 +41,7 @@ MIDI OUT = pin 1  (PORTA-2)
 
 ## Switchs configuration
 
-* If no switch is active, the panic device act as a passthrough device. Each bit that arrive on input is written on output.
+* If no switch is active (S1 or S2), the panic device act as a passthrough device. Each bit that arrive on input is written on output.
 * If S1 is active, the panic device send a "Note Off" message for each note (from 0 to 127). It take several seconds to complete
 * If S2 is active, the panic devise send a "All Sounds Off" message. Certains old sound generators may not understand this mesage but it take less than 10ms to complete.
 * S3 prevents unintentional actions on S1 et S2
