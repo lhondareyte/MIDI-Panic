@@ -1,39 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:mechanical
-LIBS:switches
-LIBS:midi-panic-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -48,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L PIC12C508-I/P U?
+L midi-panic-rescue:PIC12C508-I_P U?
 U 1 1 5A2A8C87
 P 3900 2600
 F 0 "U?" H 3350 3150 50  0000 L CNN
@@ -59,7 +25,7 @@ F 3 "" H 3900 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L midi-panic-rescue:C_Small C?
 U 1 1 5A2B0442
 P 4250 4800
 F 0 "C?" H 4050 4850 44  0000 L CNN
@@ -70,29 +36,29 @@ F 3 "" H 4250 4800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PUSH_BUTTON-RESCUE-tinyVT SW?
+L midi-panic-rescue:PUSH_BUTTON-RESCUE-tinyVT SW?
 U 1 1 5A2B0444
-P 7050 5150
-F 0 "SW?" H 7150 5300 44  0000 C CNN
-F 1 "PUSH_BUTTON" H 7110 5045 44  0001 C CNN
-F 2 "Buttons_Switches_ThroughHole:SW_PUSH-12mm" H 7050 5150 44  0001 C CNN
-F 3 "" H 7050 5150 44  0000 C CNN
-	1    7050 5150
+P 7075 4900
+F 0 "SW?" H 7175 5050 44  0000 C CNN
+F 1 "PUSH_BUTTON" H 7135 4795 44  0001 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH-12mm" H 7075 4900 44  0001 C CNN
+F 3 "" H 7075 4900 44  0000 C CNN
+	1    7075 4900
 	1    0    0    -1  
 $EndComp
 $Comp
-L PUSH_BUTTON-RESCUE-tinyVT SW?
+L midi-panic-rescue:PUSH_BUTTON-RESCUE-tinyVT SW?
 U 1 1 5A2B0450
-P 7050 4750
-F 0 "SW?" H 7150 4900 44  0000 C CNN
-F 1 "PUSH_BUTTON" H 7110 4645 44  0001 C CNN
-F 2 "Buttons_Switches_ThroughHole:SW_PUSH-12mm" H 7050 4750 44  0001 C CNN
-F 3 "" H 7050 4750 44  0000 C CNN
-	1    7050 4750
+P 7050 4650
+F 0 "SW?" H 7300 4725 44  0000 C CNN
+F 1 "PUSH_BUTTON" H 7110 4545 44  0001 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH-12mm" H 7050 4650 44  0001 C CNN
+F 3 "" H 7050 4650 44  0000 C CNN
+	1    7050 4650
 	1    0    0    -1  
 $EndComp
 $Comp
-L DIN_5 P?
+L midi-panic-rescue:DIN_5 P?
 U 1 1 5A2B0B9E
 P 8050 2200
 F 0 "P?" H 8050 2200 50  0000 C CNN
@@ -103,7 +69,7 @@ F 3 "" H 8050 2200 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R?
+L midi-panic-rescue:R R?
 U 1 1 5A2B0B9F
 P 7400 2400
 F 0 "R?" V 7300 2350 50  0000 C CNN
@@ -114,7 +80,7 @@ F 3 "" H 7400 2400 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R?
+L midi-panic-rescue:R R?
 U 1 1 5A2B0BA0
 P 8650 2150
 F 0 "R?" H 8500 2150 50  0000 C CNN
@@ -125,7 +91,7 @@ F 3 "" H 8650 2150 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B0BA1
 P 8050 2650
 F 0 "#PWR?" H 8050 2400 50  0001 C CNN
@@ -138,29 +104,7 @@ $EndComp
 NoConn ~ 8450 2200
 NoConn ~ 7650 2200
 $Comp
-L R R?
-U 1 1 5A2B0BA2
-P 7450 3700
-F 0 "R?" V 7550 3650 50  0000 C CNN
-F 1 "220R" V 7450 3700 44  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 7380 3700 50  0001 C CNN
-F 3 "" H 7450 3700 50  0000 C CNN
-	1    7450 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L R R?
-U 1 1 5A2B0BA3
-P 6150 3500
-F 0 "R?" H 6250 3400 50  0000 C CNN
-F 1 "1k2" V 6150 3500 44  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 6080 3500 50  0001 C CNN
-F 3 "" H 6150 3500 50  0000 C CNN
-	1    6150 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L +5V #PWR?
+L midi-panic-rescue:+5V #PWR?
 U 1 1 5A2B0BA4
 P 6150 3250
 F 0 "#PWR?" H 6150 3100 50  0001 C CNN
@@ -171,7 +115,7 @@ F 3 "" H 6150 3250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B0BA5
 P 6350 3850
 F 0 "#PWR?" H 6350 3600 50  0001 C CNN
@@ -182,32 +126,21 @@ F 3 "" H 6350 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
-U 1 1 5A2B0BA6
-P 6350 3600
-F 0 "R?" H 6400 3450 50  0000 C CNN
-F 1 "10k" V 6350 3600 44  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 6280 3600 50  0001 C CNN
-F 3 "" H 6350 3600 50  0000 C CNN
-	1    6350 3600
-	-1   0    0    1   
-$EndComp
-$Comp
-L DIN_5 P?
+L midi-panic-rescue:DIN_5 P?
 U 1 1 5A2B0BA7
-P 8050 3200
-F 0 "P?" H 8050 3200 50  0000 C CNN
-F 1 "DIN_5" H 8050 3050 50  0000 C CNN
-F 2 "" H 8050 3200 50  0001 C CNN
-F 3 "" H 8050 3200 50  0000 C CNN
-	1    8050 3200
+P 8050 3250
+F 0 "P?" H 8050 3250 50  0000 C CNN
+F 1 "DIN_5" H 8050 3100 50  0000 C CNN
+F 2 "" H 8050 3250 50  0001 C CNN
+F 3 "" H 8050 3250 50  0000 C CNN
+	1    8050 3250
 	-1   0    0    1   
 $EndComp
-NoConn ~ 8050 3600
-NoConn ~ 7650 3200
-NoConn ~ 8450 3200
+NoConn ~ 8050 3650
+NoConn ~ 7650 3250
+NoConn ~ 8450 3250
 $Comp
-L +5V #PWR?
+L midi-panic-rescue:+5V #PWR?
 U 1 1 5A2B0BB3
 P 3150 2200
 F 0 "#PWR?" H 3150 2050 50  0001 C CNN
@@ -218,7 +151,7 @@ F 3 "" H 3150 2200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L midi-panic-rescue:+5V #PWR?
 U 1 1 5A2B0BB4
 P 8650 1950
 F 0 "#PWR?" H 8650 1800 50  0001 C CNN
@@ -231,7 +164,7 @@ $EndComp
 Text Label 5800 2400 0    44   ~ 0
 TXD
 $Comp
-L 6N136 U?
+L midi-panic-rescue:6N136 U?
 U 1 1 5A2B0BBA
 P 6750 3550
 F 0 "U?" H 6550 3850 50  0000 L CNN
@@ -242,7 +175,7 @@ F 3 "" H 6750 3550 50  0001 L CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L D_Small_ALT D?
+L midi-panic-rescue:D_Small_ALT D?
 U 1 1 5A2B0BBB
 P 7200 3550
 F 0 "D?" V 7150 3600 50  0000 L CNN
@@ -253,7 +186,7 @@ F 3 "" V 7200 3550 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B139E
 P 3150 3000
 F 0 "#PWR?" H 3150 2750 50  0001 C CNN
@@ -266,47 +199,47 @@ $EndComp
 Text Label 5800 3650 0    44   ~ 0
 RXD
 $Comp
-L SW_DPST_x2 SW?
+L midi-panic-rescue:SW_DPST_x2 SW?
 U 1 1 5A2B1F4B
-P 7050 4350
-F 0 "SW?" H 7050 4475 50  0000 C CNN
-F 1 "RS" H 7050 4250 50  0000 C CNN
-F 2 "" H 7050 4350 50  0001 C CNN
-F 3 "" H 7050 4350 50  0001 C CNN
-	1    7050 4350
+P 7050 4375
+F 0 "SW?" H 7300 4475 50  0000 C CNN
+F 1 "RS" H 6900 4475 50  0000 C CNN
+F 2 "" H 7050 4375 50  0001 C CNN
+F 3 "" H 7050 4375 50  0001 C CNN
+	1    7050 4375
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Small_ALT D?
+L midi-panic-rescue:D_Small_ALT D?
 U 1 1 5A2B1FA9
-P 6800 4950
-F 0 "D?" V 6900 5000 50  0000 L CNN
-F 1 "DUS" V 6750 5000 50  0000 L CNN
-F 2 "" V 6800 4950 50  0001 C CNN
-F 3 "" V 6800 4950 50  0001 C CNN
-	1    6800 4950
+P 6650 4775
+F 0 "D?" V 6675 4875 50  0000 L CNN
+F 1 "DUS" V 6600 4825 50  0000 L CNN
+F 2 "" V 6650 4775 50  0001 C CNN
+F 3 "" V 6650 4775 50  0001 C CNN
+	1    6650 4775
 	0    -1   1    0   
 $EndComp
 $Comp
-L SW_DPST_x2 SW?
+L midi-panic-rescue:SW_DPST_x2 SW?
 U 1 1 5A2B282F
-P 7600 5150
-F 0 "SW?" H 7600 5275 50  0000 C CNN
-F 1 "LOCK" H 7600 5050 50  0000 C CNN
-F 2 "" H 7600 5150 50  0001 C CNN
-F 3 "" H 7600 5150 50  0001 C CNN
-	1    7600 5150
+P 7575 4900
+F 0 "SW?" H 7575 5025 50  0000 C CNN
+F 1 "LOCK" H 7575 4800 50  0000 C CNN
+F 2 "" H 7575 4900 50  0001 C CNN
+F 3 "" H 7575 4900 50  0001 C CNN
+	1    7575 4900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B289E
-P 7900 5350
-F 0 "#PWR?" H 7900 5100 50  0001 C CNN
-F 1 "GND" H 7900 5200 50  0000 C CNN
-F 2 "" H 7900 5350 50  0000 C CNN
-F 3 "" H 7900 5350 50  0000 C CNN
-	1    7900 5350
+P 7900 4950
+F 0 "#PWR?" H 7900 4700 50  0001 C CNN
+F 1 "GND" H 7900 4800 50  0000 C CNN
+F 2 "" H 7900 4950 50  0000 C CNN
+F 3 "" H 7900 4950 50  0000 C CNN
+	1    7900 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -324,32 +257,15 @@ Wire Wire Line
 Wire Wire Line
 	6450 3450 6350 3450
 Wire Wire Line
-	6150 3350 6450 3350
-Wire Wire Line
 	6150 3250 6150 3350
-Connection ~ 6150 3650
-Connection ~ 6150 3350
-Connection ~ 6350 3750
 Wire Wire Line
-	8450 3400 8550 3400
+	8450 3450 8550 3450
 Wire Wire Line
 	8650 1950 8650 2000
 Wire Wire Line
-	7050 3700 7300 3700
-Wire Wire Line
-	8550 3400 8550 3700
-Wire Wire Line
-	7050 3400 7650 3400
-Wire Wire Line
-	7200 3400 7200 3450
-Connection ~ 7200 3400
-Wire Wire Line
-	7200 3700 7200 3650
-Connection ~ 7200 3700
+	8550 3450 8550 3750
 Wire Wire Line
 	8650 2400 8650 2300
-Wire Wire Line
-	8550 3700 7600 3700
 Wire Wire Line
 	3150 3000 3150 2900
 Wire Wire Line
@@ -358,39 +274,11 @@ Wire Wire Line
 	3150 2200 3150 2300
 Wire Wire Line
 	3150 2300 3200 2300
-Wire Wire Line
-	5800 3650 6450 3650
-Wire Wire Line
-	7200 5150 7400 5150
-Wire Wire Line
-	7300 5150 7300 4750
-Wire Wire Line
-	7300 4750 7200 4750
-Connection ~ 7300 5150
-Wire Wire Line
-	7800 5150 7900 5150
-Wire Wire Line
-	7900 4350 7900 5350
-Wire Wire Line
-	5800 5150 6900 5150
-Wire Wire Line
-	6800 5150 6800 5050
-Wire Wire Line
-	6800 4850 6800 4750
-Wire Wire Line
-	5800 4750 6900 4750
-Connection ~ 6800 4750
-Connection ~ 6800 5150
-Wire Wire Line
-	7250 4350 7900 4350
-Connection ~ 7900 5150
-Wire Wire Line
-	6850 4350 5800 4350
-Text Label 5800 4350 0    44   ~ 0
+Text Label 5800 4375 0    44   ~ 0
 RS
-Text Label 5800 4750 0    44   ~ 0
+Text Label 5800 4650 0    44   ~ 0
 SW1
-Text Label 5800 5150 0    44   ~ 0
+Text Label 5800 4900 0    44   ~ 0
 SW2
 Wire Wire Line
 	4600 2800 4900 2800
@@ -414,7 +302,7 @@ Text Label 4900 2400 2    44   ~ 0
 SW2
 NoConn ~ 4600 2500
 $Comp
-L CP1_Small C?
+L midi-panic-rescue:CP1_Small C?
 U 1 1 5A2B41BC
 P 4550 4800
 F 0 "C?" H 4560 4870 50  0000 L CNN
@@ -425,7 +313,7 @@ F 3 "" H 4550 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B42D0
 P 4400 5000
 F 0 "#PWR?" H 4400 4750 50  0001 C CNN
@@ -438,7 +326,7 @@ $EndComp
 Wire Wire Line
 	4250 4900 4250 4950
 Wire Wire Line
-	4250 4950 4550 4950
+	4250 4950 4400 4950
 Wire Wire Line
 	4550 4950 4550 4900
 Wire Wire Line
@@ -447,11 +335,11 @@ Connection ~ 4400 4950
 Wire Wire Line
 	4250 4700 4250 4650
 Wire Wire Line
-	4250 4650 4550 4650
+	4250 4650 4400 4650
 Wire Wire Line
 	4550 4650 4550 4700
 $Comp
-L +5V #PWR?
+L midi-panic-rescue:+5V #PWR?
 U 1 1 5A2B45B1
 P 4400 4550
 F 0 "#PWR?" H 4400 4400 50  0001 C CNN
@@ -465,7 +353,7 @@ Wire Wire Line
 	4400 4650 4400 4550
 Connection ~ 4400 4650
 $Comp
-L PWR_FLAG #FLG?
+L midi-panic-rescue:PWR_FLAG #FLG?
 U 1 1 5A2B4FE7
 P 3700 4550
 F 0 "#FLG?" H 3700 4625 50  0001 C CNN
@@ -476,7 +364,7 @@ F 3 "" H 3700 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG?
+L midi-panic-rescue:PWR_FLAG #FLG?
 U 1 1 5A2B502C
 P 3250 5000
 F 0 "#FLG?" H 3250 5075 50  0001 C CNN
@@ -487,7 +375,7 @@ F 3 "" H 3250 5000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR?
+L midi-panic-rescue:GND #PWR?
 U 1 1 5A2B50C9
 P 3700 5000
 F 0 "#PWR?" H 3700 4750 50  0001 C CNN
@@ -500,7 +388,7 @@ $EndComp
 Wire Wire Line
 	3700 5000 3700 4550
 $Comp
-L +5V #PWR?
+L midi-panic-rescue:+5V #PWR?
 U 1 1 5A2B538D
 P 3250 4550
 F 0 "#PWR?" H 3250 4400 50  0001 C CNN
@@ -512,4 +400,106 @@ F 3 "" H 3250 4550 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	3250 5000 3250 4550
+Wire Wire Line
+	4400 4950 4550 4950
+Wire Wire Line
+	4400 4650 4550 4650
+Wire Wire Line
+	7050 3450 7200 3450
+Connection ~ 7200 3450
+Wire Wire Line
+	7200 3450 7650 3450
+$Comp
+L Device:R_Small R?
+U 1 1 5DEC3994
+P 7450 3750
+F 0 "R?" V 7375 3750 50  0000 C CNN
+F 1 "220R" V 7525 3750 44  0000 C CNN
+F 2 "" H 7450 3750 50  0001 C CNN
+F 3 "~" H 7450 3750 50  0001 C CNN
+	1    7450 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 3750 8550 3750
+Wire Wire Line
+	7200 3650 7050 3650
+Connection ~ 7200 3650
+Wire Wire Line
+	7200 3650 7200 3750
+Wire Wire Line
+	7200 3750 7350 3750
+$Comp
+L Device:R_Small R?
+U 1 1 5DECCCED
+P 6350 3600
+F 0 "R?" H 6450 3500 50  0000 C CNN
+F 1 "10k" H 6450 3575 44  0000 C CNN
+F 2 "" H 6350 3600 50  0001 C CNN
+F 3 "~" H 6350 3600 50  0001 C CNN
+	1    6350 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 3650 6150 3650
+$Comp
+L Device:R_Small R?
+U 1 1 5DECFABD
+P 6150 3500
+F 0 "R?" H 6250 3425 50  0000 C CNN
+F 1 "1k2" H 6275 3500 44  0000 C CNN
+F 2 "" H 6150 3500 50  0001 C CNN
+F 3 "~" H 6150 3500 50  0001 C CNN
+	1    6150 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 3350 6450 3350
+Wire Wire Line
+	6150 3400 6150 3350
+Connection ~ 6150 3350
+Wire Wire Line
+	6150 3600 6150 3650
+Connection ~ 6150 3650
+Wire Wire Line
+	6150 3650 6450 3650
+Wire Wire Line
+	6350 3700 6350 3750
+Connection ~ 6350 3750
+Wire Wire Line
+	6350 3500 6350 3450
+Wire Wire Line
+	6900 4650 6650 4650
+Wire Wire Line
+	6925 4900 6650 4900
+Wire Wire Line
+	6650 4900 6650 4875
+Wire Wire Line
+	6650 4900 5800 4900
+Connection ~ 6650 4900
+Wire Wire Line
+	6650 4675 6650 4650
+Connection ~ 6650 4650
+Wire Wire Line
+	6650 4650 5800 4650
+Wire Wire Line
+	7775 4900 7900 4900
+Wire Wire Line
+	7900 4900 7900 4950
+Wire Wire Line
+	7375 4900 7325 4900
+Wire Wire Line
+	7200 4650 7325 4650
+Wire Wire Line
+	7325 4650 7325 4900
+Connection ~ 7325 4900
+Wire Wire Line
+	7325 4900 7225 4900
+Wire Wire Line
+	6850 4375 5800 4375
+Wire Wire Line
+	7250 4375 7900 4375
+Wire Wire Line
+	7900 4375 7900 4900
+Connection ~ 7900 4900
 $EndSCHEMATC
