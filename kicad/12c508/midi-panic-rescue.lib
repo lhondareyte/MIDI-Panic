@@ -1,28 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device_R_Small
+# +5V
 #
-DEF Device_R_Small R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# midi-panic-rescue_+5V
-#
-DEF midi-panic-rescue_+5V #PWR 0 0 Y Y 1 F P
+DEF +5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "midi-panic-rescue_+5V" 0 140 50 H V C CNN
+F1 "+5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -33,11 +16,11 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_6N136
+# 6N136
 #
-DEF midi-panic-rescue_6N136 U 0 40 Y Y 1 F N
+DEF 6N136 U 0 40 Y Y 1 F N
 F0 "U" -200 300 50 H V L CNN
-F1 "midi-panic-rescue_6N136" 0 300 50 H V L CNN
+F1 "6N136" 0 300 50 H V L CNN
 F2 "Housings_DIP:DIP-8_W7.62mm" -200 -300 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
 $FPLIST
@@ -72,11 +55,11 @@ X ~ 8 300 200 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_CP1_Small
+# CP1_Small
 #
-DEF midi-panic-rescue_CP1_Small C 0 10 N N 1 F N
+DEF CP1_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "midi-panic-rescue_CP1_Small" 10 -80 50 H V L CNN
+F1 "CP1_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -92,11 +75,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_C_Small
+# C_Small
 #
-DEF midi-panic-rescue_C_Small C 0 10 N N 1 F N
+DEF C_Small C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "midi-panic-rescue_C_Small" 10 -80 50 H V L CNN
+F1 "C_Small" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -110,11 +93,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_DIN_5
+# DIN_5
 #
-DEF midi-panic-rescue_DIN_5 J 0 40 Y N 1 F N
+DEF DIN_5 J 0 40 Y N 1 F N
 F0 "J" 0 -350 50 H V C CNN
-F1 "midi-panic-rescue_DIN_5" 0 -425 50 H V C CNN
+F1 "DIN_5" 0 -425 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -141,11 +124,11 @@ X 5 5 400 200 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_D_Small_ALT
+# D_Small_ALT
 #
-DEF midi-panic-rescue_D_Small_ALT D 0 10 N N 1 F N
+DEF D_Small_ALT D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
-F1 "midi-panic-rescue_D_Small_ALT" -150 -80 50 H V L CNN
+F1 "D_Small_ALT" -150 -80 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -164,11 +147,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_GND
+# GND
 #
-DEF midi-panic-rescue_GND #PWR 0 0 Y Y 1 F P
+DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "midi-panic-rescue_GND" 0 -150 50 H V C CNN
+F1 "GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -177,11 +160,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_PIC12C508-I_P
+# PIC12C508-I_P
 #
-DEF midi-panic-rescue_PIC12C508-I_P U 0 40 Y Y 1 F N
+DEF PIC12C508-I_P U 0 40 Y Y 1 F N
 F0 "U" -550 550 50 H V L CNN
-F1 "midi-panic-rescue_PIC12C508-I_P" -550 450 50 H V L CNN
+F1 "PIC12C508-I_P" -550 450 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -197,11 +180,11 @@ X VSS 8 -700 -300 150 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_PUSH_BUTTON-RESCUE-tinyVT
+# PUSH_BUTTON-RESCUE-tinyVT
 #
-DEF midi-panic-rescue_PUSH_BUTTON-RESCUE-tinyVT SW 0 40 Y Y 1 F N
+DEF PUSH_BUTTON-RESCUE-tinyVT SW 0 40 Y Y 1 F N
 F0 "SW" -170 145 44 H V C CNN
-F1 "midi-panic-rescue_PUSH_BUTTON-RESCUE-tinyVT" 60 -105 44 H V C CNN
+F1 "PUSH_BUTTON-RESCUE-tinyVT" 60 -105 44 H V C CNN
 F2 "" 0 0 44 H V C CNN
 F3 "" 0 0 44 H V C CNN
 DRAW
@@ -213,11 +196,11 @@ X ~ 2 150 0 50 L 44 44 1 1 I
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_PWR_FLAG
+# PWR_FLAG
 #
-DEF midi-panic-rescue_PWR_FLAG #FLG 0 0 N N 1 F P
+DEF PWR_FLAG #FLG 0 0 N N 1 F P
 F0 "#FLG" 0 75 50 H I C CNN
-F1 "midi-panic-rescue_PWR_FLAG" 0 150 50 H V C CNN
+F1 "PWR_FLAG" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -226,11 +209,11 @@ X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_R
+# R
 #
-DEF midi-panic-rescue_R R 0 0 N Y 1 F N
+DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "midi-panic-rescue_R" 0 0 50 V V C CNN
+F1 "R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -244,11 +227,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# midi-panic-rescue_SW_DPST_x2
+# SW_DPST_x2
 #
-DEF midi-panic-rescue_SW_DPST_x2 SW 0 0 Y N 2 F N
+DEF SW_DPST_x2 SW 0 0 Y N 2 F N
 F0 "SW" 0 125 50 H V C CNN
-F1 "midi-panic-rescue_SW_DPST_x2" 0 -100 50 H V C CNN
+F1 "SW_DPST_x2" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
