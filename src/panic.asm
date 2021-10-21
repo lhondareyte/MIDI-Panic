@@ -1,28 +1,27 @@
+;
+; Copyright (c) 2006 Luc Hondareyte
+;
+; Permission is hereby granted, free of charge, to any person obtaining a copy
+; of this software and associated documentation files (the "Software"), to deal
+; in the Software without restriction, including without limitation the rights
+; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+; copies of the Software, and to permit persons to whom the Software is
+; furnished to do so, subject to the following conditions:
 ; 
-;   Copyright (c) 2006 Luc HONDAREYTE
-;   All rights reserved.
-;  
-;   Redistribution and use in source and binary forms, with or without
-;   modification, are permitted provided that the following conditions
-;   are met:
-;   1. Redistributions of source code must retain the above copyright
-;      notice, this list of conditions and the following disclaimer.
-;  
-;   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
-;   ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-;   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
-;   FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-;   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
-;   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
-;   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-;   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-;   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-;   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
-;   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+; The above copyright notice and this permission notice shall be included in all
+; copies or substantial portions of the Software.
+; 
+; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+; SOFTWARE.
 ;
 ;	$Id: panic.asm,v 1.13 2012/04/09 16:21:40 luc Exp $
 ;
-;************************************************************************;
+;*******************************************************************************;
 
 
 
@@ -87,7 +86,7 @@ endif
 	goto	init
 
 ;************************************************************************;
-;     Generation des signaux logiques à 31250 Bauds soit 32uS par bit    ;
+;     Generation des signaux logiques Ã  31250 Bauds soit 32uS par bit    ;
 ;************************************************************************;
 
 StartBit
@@ -104,7 +103,7 @@ ZeroLogic
 	nop
 	nop
 
-	bcf	MIDIOUT		; transition à 10uS
+	bcf	MIDIOUT		; transition Ã  10uS
 
 	nop
 	nop
@@ -143,7 +142,7 @@ UnLogic
 	nop
 	nop
 	nop
-	bsf	MIDIOUT		; transition à 10uS
+	bsf	MIDIOUT		; transition Ã  10uS
 
 	nop
 	nop
@@ -188,7 +187,7 @@ next_bit
 	call 	ZeroLogic	; sinon, on envoie "0"
 
 
-	decfsz	bits,1		; Si compteur de bit à zéro
+	decfsz	bits,1		; Si compteur de bit Ã  zÃ©ro
 	goto	next_bit	; on traite le suivant
 
 	call 	StopBit		; envoi du STOP BIT
@@ -271,27 +270,27 @@ endif
 ;                  Debut des hostilites...                               ;
 ;************************************************************************;
 
-	bsf	MIDIOUT		; Sortie MIDI à 1
+	bsf	MIDIOUT		; Sortie MIDI Ã  1
 	call	pause200mS
 	
 ;************************************************************************;
-;   Pour eviter des problèmes de glissement de temps, la duree de la     ;
+;   Pour eviter des problÃ¨mes de glissement de temps, la duree de la     ;
 ;   boucle PASS-THROUGHT doit etre un sous-multiple de 32uS.             ;
 ;   Ici, elle dure 8uS, soit 32uS/4.                                     ;
 ;************************************************************************;
 	
 Wait_Release_Keys
-	btfss	KEY1		; Si une des touches est enfoncée
+	btfss	KEY1		; Si une des touches est enfoncÃ©e
 	goto	Wait_Release_Keys; on attend son relachement
 	
 Normal_Operation
 
 	btfsc	MIDI_IN		; PASS-THROUGHT MIDI : On recopie MIDI_IN
-	bsf	MIDIOUT		; sur MIDIOUT. Les deux btfsX à suivre sont 
+	bsf	MIDIOUT		; sur MIDIOUT. Les deux btfsX Ã  suivre sont 
 	btfss	MIDI_IN		; moins couteux en temps que des "goto".
 	bcf	MIDIOUT
 
-	btfss	KEY1		; Si KEY1 est enfoncée, on va au
+	btfss	KEY1		; Si KEY1 est enfoncÃ©e, on va au
 	goto	read_keys	; traitement clavier.
 				; sinon, on continue le PASS-THROUGHT
 	goto	Normal_Operation
@@ -300,11 +299,11 @@ Normal_Operation
 ;                     FIN de boucle PASS-THROUGHT                        ;
 ;************************************************************************;
 ;  Pour reduire la boucle PASS-THROUGHT, je teste uniquement KEY2:       ;
-;  S1 met à "1" KEY1 et KEY2 (voir diode D1)                             ;
-;  S2 met à "1" uniquement KEY2                                          ;
+;  S1 met Ã  "1" KEY1 et KEY2 (voir diode D1)                             ;
+;  S2 met Ã  "1" uniquement KEY2                                          ;
 ;  Donc, dans la boucle PASS-THROUGHT, on regarde si une touche est      ;
-;  enfoncée. Dans la boucle read_keys, on determine quelle touche est    ;
-;  enfoncée.                                                             ;
+;  enfoncÃ©e. Dans la boucle read_keys, on determine quelle touche est    ;
+;  enfoncÃ©e.                                                             ;
 ;************************************************************************;
 
 read_keys
@@ -358,11 +357,11 @@ running_status
 
 	movf	notes,w
 	movwf	buffer
-	call 	send_char	; Envoi du numéro de note
+	call 	send_char	; Envoi du numÃ©ro de note
 
 	movlw 	0
 	movwf	buffer
-	call	send_char	; Envoi du bit de status (velocité=0)
+	call	send_char	; Envoi du bit de status (velocitÃ©=0)
 
 	movf	notes,f	
 	btfsc	STATUS,Z
