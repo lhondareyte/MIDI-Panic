@@ -18,13 +18,16 @@ Or be include in an existing device. Eg. a MIDI Thru-box:
   <img src="figures/interface.svg" width="500"/>
 </p>
 
-## About the 16F84A
+## About the 16F84A version
+
 The 16F84A version require a 4MHz external oscillator. If you want run the device with internal oscillator (not recommanded), add the <code>USE_INTERNAL_OSC</code> flag in Makefile:
 
 ```
 ASMFLAGS="-w1 -D HAVE_RUNNING_STATUS -D USE_INTERNAL_OSC"
 ```
+
 The pinout for the 16F84A version is as follow:
+
 ```
 S1       = pin 6  (PORTB-0)
 S2       = pin 7  (PORTB-1)
